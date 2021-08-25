@@ -11,7 +11,6 @@
       "directory": "lib/ffmpeg",
       "version": "20.08",
       "add-ld-path": ".",
-      "no-autodownload": true,
       "autodelete": false
     }
   },
@@ -25,7 +24,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.gnome.org/pub/GNOME/sources/mm-common/1.0/mm-common-1.0.3.tar.xz",
+          "url": "https://ftp.gnome.org/pub/GNOME/sources/mm-common/1.0/mm-common-1.0.3.tar.xz",
           "sha256": "e81596625899aacf1d0bf27ccc2fcc7f373405ec48735ca1c7273c0fbcdc1ef5"
         }
       ]
@@ -36,7 +35,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.gnome.org/pub/GNOME/sources/libsigc++/3.0/libsigc++-3.0.7.tar.xz",
+          "url": "https://ftp.gnome.org/pub/GNOME/sources/libsigc++/3.0/libsigc++-3.0.7.tar.xz",
           "sha256": "bfbe91c0d094ea6bbc6cbd3909b7d98c6561eea8b6d9c0c25add906a6e83d733"
         }
       ]
@@ -47,7 +46,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.gnome.org/pub/GNOME/sources/glibmm/2.68/glibmm-2.68.1.tar.xz",
+          "url": "https://ftp.gnome.org/pub/GNOME/sources/glibmm/2.68/glibmm-2.68.1.tar.xz",
           "sha256": "6664e27c9a9cca81c29e35687f49f2e0d173a2fc9e98c3428311f707db532f8c"
         }
       ]
@@ -58,7 +57,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://cairographics.org/releases/cairomm-1.16.1.tar.xz",
+          "url": "https://cairographics.org/releases/cairomm-1.16.1.tar.xz",
           "sha256": "6f6060d8e98dd4b8acfee2295fddbdd38cf487c07c26aad8d1a83bb9bff4a2c6"
         }
       ]
@@ -69,7 +68,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.gnome.org/pub/GNOME/sources/pangomm/2.49/pangomm-2.49.1.tar.xz",
+          "url": "https://ftp.gnome.org/pub/GNOME/sources/pangomm/2.49/pangomm-2.49.1.tar.xz",
           "sha256": "a2272883152618fddea016a62f50eb23b9b056ab3c08f3b64422591e6a507bd5"
         }
       ]
@@ -80,7 +79,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.gnome.org/pub/GNOME/sources/atkmm/2.36/atkmm-2.36.1.tar.xz",
+          "url": "https://ftp.gnome.org/pub/GNOME/sources/atkmm/2.36/atkmm-2.36.1.tar.xz",
           "sha256": "e11324bfed1b6e330a02db25cecc145dca03fb0dff47f0710c85e317687da458"
         }
       ]
@@ -91,7 +90,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "http://ftp.gnome.org/pub/GNOME/sources/gtkmm/4.2/gtkmm-4.2.0.tar.xz",
+          "url": "https://ftp.gnome.org/pub/GNOME/sources/gtkmm/4.2/gtkmm-4.2.0.tar.xz",
           "sha256": "480c4c38f2e7ffcf58f56bb4b4d612f3f0cac9fd5908fd2cd8249fe10592a98b"
         }
       ]
@@ -238,6 +237,20 @@
         "url": "https://gitlab.freedesktop.org/gstreamer/gst-libav.git",
         "branch": "1.19.1"
       }
+      ]
+    },
+    {
+      "name": "x264",
+      "config-opts": [
+        "--enable-pic",
+        "--enable-shared"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://code.videolan.org/videolan/x264.git",
+          "branch": "d198931a63049db1f2c92d96c34904c69fde8117"
+        }
       ]
     },
     {
