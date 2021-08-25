@@ -6,6 +6,13 @@
   "command": "gtkeddit",
   "finish-args": ["--share=network", "--socket=wayland", "--socket=fallback-x11", "--socket=pulseaudio", "--device=dri"],
   "cleanup": ["/include", "/lib/*/include", "/lib/pkgconfig", "/share/pkgconfig", "/share/aclocal", "/man", "/share/man", "/share/info", "/share/gtk-doc", "*.la", "*.a" ],
+  "add-extensions": {
+    "org.freedesktop.Platform.ffmpeg-full": {
+      "directory": "lib/ffmpeg",
+      "version": "20.08",
+      "add-ld-path": "."
+    }
+  },
   "cleanup-commands": [
     "mkdir -p ${FLATPAK_DEST}/lib/ffmpeg"
   ],
@@ -168,74 +175,6 @@
       ]
     },
     {
-      "name": "ffmpeg",
-      "config-opts": [
-        "--enable-pic",
-        "--enable-shared",
-        "--disable-doc",
-        "--disable-static",
-        "--enable-gpl",
-        "--enable-libx264",
-        "--enable-libvpx",
-        "--enable-libmp3lame",
-        "--enable-libvorbis",
-        "--enable-libopus"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "http://ffmpeg.org/releases/ffmpeg-4.4.tar.xz",
-          "sha256": "06b10a183ce5371f915c6bb15b7b1fffbe046e8275099c96affc29e17645d909"
-        }
-      ]
-    },
-    {
-      "name": "gstreamer",
-      "buildsystem": "meson",
-      "builddir": true,
-      "config-opts": [
-        "-Dgtk_doc=disabled",
-        "--prefix=/app",
-        "--buildtype=release"
-      ],
-      "sources": [{
-        "type": "git",
-        "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git",
-        "branch": "1.19.1"
-      }]
-    },
-    {
-      "name": "gst-plugins-base",
-      "buildsystem": "meson",
-      "config-opts": [
-        "-Dgtk_doc=disabled",
-        "--prefix=/app",
-        "--buildtype=release"
-      ],
-      "builddir": true,
-      "sources": [{
-        "type": "git",
-        "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-base.git",
-        "branch": "1.19.1"
-      }]
-    },
-    {
-      "name": "gst-plugins-good",
-      "buildsystem": "meson",
-      "builddir": true,
-      "config-opts": [
-        "-Dgtk_doc=disabled",
-        "--prefix=/app",
-        "--buildtype=release"
-      ],
-      "sources": [{
-        "type": "git",
-        "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-good.git",
-        "branch": "1.19.1"
-      }
-      ]
-    },
-    {
       "name": "gst-plugins-bad",
       "buildsystem": "meson",
       "builddir": true,
@@ -248,23 +187,7 @@
       "sources": [{
         "type": "git",
         "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad.git",
-        "branch": "1.19.1"
-      }
-      ]
-    },
-    {
-      "name": "gst-plugins-ugly",
-      "buildsystem": "meson",
-      "builddir": true,
-      "config-opts": [
-        "-Dgtk_doc=disabled",
-        "--prefix=/app",
-        "--buildtype=release"
-      ],
-      "sources": [{
-        "type": "git",
-        "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-ugly.git",
-        "branch": "1.19.1"
+        "branch": "1.16.3"
       }
       ]
     },
@@ -280,7 +203,7 @@
       "sources": [{
         "type": "git",
         "url": "https://gitlab.freedesktop.org/gstreamer/gst-libav.git",
-        "branch": "1.19.1"
+        "branch": "1.16.3"
       }
       ]
     },
