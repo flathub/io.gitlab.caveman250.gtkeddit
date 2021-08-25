@@ -192,13 +192,30 @@
       }]
     },
     {
-      "name": "gst-plugins-bad",
+      "name": "gst-plugins-good",
       "buildsystem": "meson",
       "builddir": true,
       "config-opts": [
         "-Dgtk_doc=disabled",
         "--prefix=/app",
         "--buildtype=release"
+      ],
+      "sources": [{
+        "type": "git",
+        "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-good.git",
+        "branch": "1.19.1"
+      }
+      ]
+    },
+    {
+      "name": "gst-plugins-bad",
+      "buildsystem": "meson",
+      "builddir": true,
+      "config-opts": [
+        "-Dgtk_doc=disabled",
+        "--prefix=/app",
+        "--buildtype=release",
+        "-Dopenh264=disabled"
       ],
       "sources": [{
         "type": "git",
