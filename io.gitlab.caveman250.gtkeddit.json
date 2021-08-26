@@ -213,7 +213,7 @@
         {
           "type": "git",
           "url": "https://gitlab.com/caveman250/gtkeddit",
-          "tag": "0.1.7"
+          "tag": "0.1.8"
         }
       ],
       "buildsystem": "cmake-ninja",
