@@ -268,7 +268,7 @@
         {
           "type": "git",
           "url": "https://gitlab.com/caveman250/gtkeddit",
-          "tag": "0.2.4"
+          "tag": "0.3.0"
         }
       ],
       "buildsystem": "cmake-ninja",
