@@ -1,5 +1,5 @@
 {
-  "end-of-life": "The application has been renamed to Headlines",
+  "end-of-life": "The application has been renamed to Headlines", 
   "end-of-life-rebase": "io.gitlab.caveman250.headlines",
   "app-id": "io.gitlab.caveman250.gtkeddit",
   "runtime": "org.gnome.Platform",
